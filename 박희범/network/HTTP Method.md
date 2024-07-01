@@ -34,7 +34,7 @@
 
     - 토스 페이먼츠 예시 코드
       <details>
-        <summary>클라이언트 코드</summary>
+        <summary>클라이언트 코드 //TIMEOUT의 경우 요청을 재귀적으로 호출하네요</summary>
 
         ```javascript
           let idempotentKey = generateUUIDv4()

@@ -1,6 +1,7 @@
 ### 3-Way Handshake
  - 3-Way Handshake란?
 TCP는 장치들 사이에 논리적인 접속을 성립(establish)하기 위하여 three-way handshake를 사용합니다.
+![3wayhandshake](https://github.com/user-attachments/assets/1ba06c42-5e1e-4699-9c15-af4ee2e21f1b)
 
 - 사전 조건
   1. 클라이언트 포트 할당

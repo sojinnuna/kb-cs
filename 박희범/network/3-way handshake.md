@@ -79,5 +79,11 @@ TCP는 장치들 사이에 논리적인 접속을 성립(establish)하기 위하
  이처럼 공격자는 SYN 패킷을 반복적으로 전송하여 서버 컴퓨터에 있는 사용 가능한 모든 포트를 사용하게 하여, 정상적인 트래픽에 느리게 응답하거나 전혀 응답하지 못하게 할 수 있습니다.
 
 - 위 질문과 모순될 수 있지만, 3-Way Handshake의 속도 문제 때문에 이동 수를 줄이는 0-RTT 기법을 많이 적용하고 있습니다. 어떤 방식으로 가능한 걸까요?
+  
+     ![](https://www.keycdn.com/img/blog/0-rtt-vs-1-rtt-md.webp)
      
-  TLS 1.2 이전 방식은 TCP Handshake > TLS Handshake > 데이터 전송의 과정을 순차적으로 수행했습니다. TLS1.3는 initial handshake 하는 과정에서만 TLS Handshake를 수행하여 세션을 설정합니다. 이후 서버에 다시 연결하려고 할 때, 클라이언트는 저장된 세션 정보를 토대로 전송할 데이터를 암호화하여 같이 보냅니다.
+  TLS 1.2 이전 방식은 TCP Handshake > TLS Handshake > 데이터 전송의 과정을 순차적으로 수행했습니다.(2-RTT)   
+  TLS1.3에서는 initial handshake 하는 과정에서만 TLS Handshake를 수행하여 세션을 설정합니다.  
+  세션이 설정되면, 서버는 클라이언트에게 ticket을 발행해줍니다.
+  클라이언트는 재연결을 시도할 때 ticket이 유효하면, 초기 연결 설정을 수행하지 않고 ticket과 함께 데이터를 암호화하여 보냅니다.(0-RTT)
+  ticket이 유효하지 않다면, 다시 세션을 설정합니다.(0-RTT)

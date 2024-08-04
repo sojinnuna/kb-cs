@@ -8,7 +8,7 @@
   > IPv6 범위 : 0000:0000:0000:0000:0000:0000:0000:0000 ~ ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
 
   - IPv4 헤더
-  ![asd](https://advancedinternettechnologies.wordpress.com/wp-content/uploads/2012/01/ipv4-header.png)
+  ![ipv4header](https://advancedinternettechnologies.wordpress.com/wp-content/uploads/2012/01/ipv4-header.png)
   - Version : ip 버전
   - Header Length : 헤더의 길이, 주로 5를 사용, 5 * 4byte => 20 byte 
   - TOS : 라우터나 호스트 등의 장치에서 패킷 처리에 대한 우선순위(QoS)를 설정

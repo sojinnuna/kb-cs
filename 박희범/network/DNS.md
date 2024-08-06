@@ -27,7 +27,7 @@ DNS는 .으로 구분되고, 거꾸로 읽음 `...xxx.yyy.zzz .(root)`
 ex) m.yyy.zzz, test.yyy.zzz, xxx.yyy.zzz
 
 ##### 도메인 이름 -> IP 매핑 과정
-![alt text](image-2.png)
+![image-2](https://github.com/user-attachments/assets/7e6ce630-14ae-47fa-a457-0162a6362a8a)
 - recursive query 과정 :   
     DNS resolver는 cache된 도메인 이름을 못찾았으면 recursive query를 수행하여 IP 주소를 찾습니다.
     1. root server에 요청하여 TLD server 정보를 받습니다.

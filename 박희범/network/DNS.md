@@ -1,12 +1,21 @@
 # DNS에 대해 설명해 주세요.
-도메인 이름 시스템 (Domain Name System)
-텍스트(도메인 이름)를 IP주소로 변환해주는 것   
-- URL
-![URL](https://cdn.prod.website-files.com/64949e4863d96e26a1da8386/64f5f56c78d05cf501922f99_64a2ef9774661044d9755e98_URL%2520-%2520Glossary.png)
-Domain Name 형식 : `...xxx.yyy.zzz`   
-DNS는 .으로 구분되고, 거꾸로 읽음 `...xxx.yyy.zzz .(root)`   
+도메인 이름 시스템 (Domain Name System)   
+도메인 이름과 IP주소를 1:1로 변환   
+사람이 쉽게 기억하고 입력할 수 있도록 함  
+- Domain Name 형식   
+  DNS는 계층적 구조를 가짐  
+  각 계층은 .으로 구분하고 이를 거꾸로 읽음       
+  ex) `...xxx.yyy.zzz.`   
+     마지막 .은 Root 도메인을 의미, 일반적으로 사용자에게 표시되지 않음  
 ![domain name](https://raventools.com/marketing-glossary/wp-content/uploads/2016/02/1354-2.jpg)   
-#### domain의 종류
+
+
+- URL  
+  도메인 이름을 포함한 경로
+![URL](https://cdn.prod.website-files.com/64949e4863d96e26a1da8386/64f5f56c78d05cf501922f99_64a2ef9774661044d9755e98_URL%2520-%2520Glossary.png)
+
+
+### domain의 종류
 ##### TLD(Top Level Domain) : 인터넷 주소 체계에서 가장 높은 계층의 도메인   
 1. gTLD(일반 최상위 도메인)
     - `com` - 영리 목적의 기업이나 단체
@@ -20,13 +29,13 @@ DNS는 .으로 구분되고, 거꾸로 읽음 `...xxx.yyy.zzz .(root)`
     go.kr, ac.kr, co.kr 등
 ##### SLD(Second Level Domain)
 사용자가 브랜드 및 웹사이트를 나타내기 위해 등록하는 도메인   
-사용하기 위해 도메인 등록 기관에 도메인 이름을 등록해야 함
+도메인 등록 기관에 도메인 이름을 등록하여 사용 
 
 ##### 그 이하 도메인
 사용자가 임의로 지정
 ex) m.yyy.zzz, test.yyy.zzz, xxx.yyy.zzz
 
-##### 도메인 이름 -> IP 매핑 과정
+### 도메인 이름 -> IP 매핑 과정
 ![image-2](https://github.com/user-attachments/assets/7e6ce630-14ae-47fa-a457-0162a6362a8a)
 - recursive query 과정 :   
     DNS resolver는 cache된 도메인 이름을 못찾았으면 recursive query를 수행하여 IP 주소를 찾습니다.
@@ -67,12 +76,12 @@ DNS 레코드는 해당 레코드와 일치하는 각 네임 서버에 저장 �
 `ex) sftp.example.com 900 IN CNAME example.com`   
 - AAAA : 도메인 주소와 IPv6를 매핑  
 
-- 도메인 주소와 IP 주소를 매핑 vs 도메인을 다른 도메인과 매핑
-  도메인과 IP 주소를 매핑하면 바로 주소로 찾아가므로 빠름
+- 도메인 주소와 IP 주소를 매핑 vs 도메인을 다른 도메인과 매핑   
+  도메인과 IP 주소를 매핑하면 바로 주소로 찾아가므로 빠름   
   도메인을 다른 도메인과 매핑하면 관계를 정의할 수 있음(변경에 유연)  
 
 #### hosts 파일은 어떤 역할을 하나요? DNS와 비교하였을 때 어떤 것이 우선순위가 더 높나요?
-- hosts 파일 
-  운영체제 내에서 도메인 이름과 IP주소를 직접 매핑하는 기능을 지원
-
-  DNS보다 우선순위가 더 높습니다. 따라서 해킹에서는 공격자가 hosts 파일을 조작하여 DNS 스푸핑을 시도합니다.
+- hosts 파일   
+  운영체제 내에서 도메인 이름과 IP주소를 직접 매핑하는 기능을 지원  
+  어플리케이션(ex : 브라우저) 캐시를 확인하는 것보다 우선순위가 떨어지지만, 통상적인 DNS보단 우선순위가 더 높습니다.    
+  해킹에서는 공격자가 hosts 파일을 조작하여 DNS 스푸핑을 시도합니다.   

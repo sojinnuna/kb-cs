@@ -15,6 +15,7 @@
   - IOC Container : 정의된 Bean들을 인스턴스화, 주입, 관리하는 책임이 있는 주체
   - Bean : IOC Contianer에 의해 인스턴스화, 주입, 관리되는 객체, Bean이 누구인지, 관계가 어떻게 되있는 지  정의되어 있음
   - Configuration Metadata에 Bean으로 관리될 객체가 누군지, 관계가 어떻게 되어있는지 기술되어 있음
+  - Configuration Metada를 통해 BeanDefinition을 생성하고 IOC container가 이를 읽어 Bean으로 등록
   - XML, Annotation, Java를 기반으로 Configuration Metadata를 정의할 수 있음
   ![](https://docs.spring.io/spring-framework/docs/5.3.37/reference/html/images/container-magic.png)
 ### 후보 없이 특정 기능을 하는 클래스가 딱 한 개하면, 구체 클래스를 그냥 사용해도 되지 않나요? 그럼에도 불구하고 왜 Spring에선 Bean을 사용 할까요?
@@ -23,6 +24,10 @@
 - 테스트 용이   
   테스트 시 의존성 주입을 통해 모의 객체(mock)를 사용하거나 특정 환경에 맞는 Bean을 대체할 수 있어 테스트가 용이합니다.
 ### Spring의 Bean 생성 주기에 대해 설명해 주세요.
+- 기본적인 스프링 빈의 이벤트 생명주기   
+  스프링 빈 생성 -> 의존관계 주입 -> 초기화 콜백 -> 사용 -> 소멸전 콜백 -> 빈 소멸   
+  **초기화 콜백** : 빈이 생성되고, 빈의 의존관계 주입이 완료된 후 호출  
+  **소멸전 콜백** 빈이 소멸되기 직전에 호출  
 - bean의 scope을 정의하여 생명 주기와 사용 범위를 정할 수 있습니다
 - 기본적으로 singleton scope, prototype scope을 지원합니다
   1. singleton(default)   
@@ -50,8 +55,14 @@
 - 요청(DI)마다 빈의 새로운 인스턴스를 생성합니다.
 - 컨테이너가 빈의 생명주기를 모두 관리하지 않습니다.
 - stateful baen에 대해 prototype bean을 사용하고 stateless bean에 대해 singleton bean을 사용합니다.
-- singleton bean에 주입된 prototype bean
-  singleton bean이 인스턴스화 되는 것은 한번(Application Context load)이고 그때 prototype bean이 주입됩니다. singleton bean에 의존하는 prototype bean은 새로운 호출에 대해 빈을 생성하지 않습니다. 만약 prototype bean이 상태를 가지고 있다면 해당 상태가 여러 클라이언트에서 공유될 수 있습니다(동시성 문제).   
+- **singleton bean에 주입된 prototype bean에 대한 문제**  
+  singleton bean이 인스턴스화 되는 것은 한번(Application Context load)이고 그때 prototype bean이 주입됩니다. singleton bean에 의존하는 prototype bean은 새로운 호출에 대해 빈을 생성하지 않습니다.   
+  만약 prototype bean이 상태를 가지고 있다면 해당 상태가 여러 클라이언트에서 공유될 수 있습니다(동시성 문제).    
   이런 문제를 해결하기 위해 런타임에 prototype bean을 생성하는 방법을 따라야합니다. 
 ### method injection
-  sigleton bean에 주입되는 prototype bean을 메소드를 사용하여 주입합니다. XML, Annotation를 선택하여 구현할 수 있습니다. Annotation 방법은 @Lookup을 사용합니다. 컨테이너는 해당 Annotation이 붙은 메소드를 재정의(Override)하여 새로운 빈이 주입될 수 있게 합니다. 이런 방식을 구현하기 위해 Spring은 CGLIB 라이브러리를 사용하여 바이트코드에서 method injection을 구현합니다.
+  sigleton bean에 주입되는 prototype bean을 메소드를 사용하여 주입합니다.   
+  XML, Annotation를 선택하여 구현할 수 있습니다.   
+  Annotation 방법은 @Lookup을 사용합니다. 
+  컨테이너는 해당 Annotation이 붙은 메소드를 재정의(Override)하여 새로운 빈이 주입될 수 있게 합니다.   
+  이런 방식을 구현하기 위해 Spring은 CGLIB 라이브러리를 사용하여 바이트코드를 조작하여 method injection을 구현합니다.
+  >CGLIB : 바이트코드를 조작해서 동적으로 클래스를 생성하는 기술을 제공하는 라이브러리

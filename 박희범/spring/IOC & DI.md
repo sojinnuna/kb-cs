@@ -25,12 +25,12 @@
 ### Spring의 Bean 생성 주기에 대해 설명해 주세요.
 - bean의 scope을 정의하여 생명 주기와 사용 범위를 정할 수 있습니다
 - 기본적으로 singleton scope, prototype scope을 지원합니다
-  1. singleton(default)
+  1. singleton(default)   
     Application Context가 로드될 떄 인스턴스화 됩니다.
     컨테이너에서 빈을 하나만 생성, 사용하는 객체는 해당 객체의 동일한 인스턴스를 공유합니다.
     Application Context가 종료될 때 소멸됩니다.
 
-  2. prototype
+  2. prototype   
     요청(DI)마다 빈의 새로운 인스턴스를 생성합니다.   
     컨테이너가 빈의 생성 주기 모두를 관리하지 않습니다.(클라이언트가 빈의 소멸을 정의하여 자원을 반환받아야 함)   
 

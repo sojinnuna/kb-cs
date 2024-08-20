@@ -51,3 +51,92 @@ AOP는 OOP의 프로그램 구조를 보완하는 개념
   2. 빈 후처리기가 어드바이저 조회
   3. 프록시 생성
   4. 원본대신 프록시를 스프링 빈으로 등록
+
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/96d4f809-ca24-4c06-ac1e-c069edc40ebf/634329f1-ef89-4071-adcc-81816da58fa5/image.png)
+
+### 글쓰기 기능
+
+- Service
+
+```java
+    @Override
+    public Board detail(int boardNo) {
+        SqlSession session = sessionFactory.openSession();
+        BoardMapper mapper = session.getMapper(BoardMapper.class);
+        Board board = mapper.selectById(boardNo);
+        if(board == null){
+            throw new IllegalArgumentException();
+        }
+        return board;
+    }
+```
+
+- Controller
+
+```java
+ 		@GetMapping("/{boardNo}")
+    public ResponseEntity<Board> detail(@PathVariable int boardNo) {
+        Board board = boardService.detail(boardNo);
+        return ResponseEntity.ok(board);
+    }
+```
+
+- Advice
+
+```java
+@RestControllerAdvice
+public class MyControllerAdvice {
+
+    @ExceptionHandler(IllegalArgumentException.class)
+    public ResponseEntity IllegalArgumentExceptionHandler(IllegalArgumentException e){
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+    }
+}
+
+```
+
+Controller 부분에서 정상적인 케이스에 대한 것만 구성을 하고 비정상은 Advice에서 처리 
+
+### @Transactional
+
+특정 예외가 발생하면 롤백 설정할 수 있음
+
+- 설정
+
+```java
+@EnableTransactionManagement
+public class AppConfig{
+...
+    @Bean
+    public PlatformTransactionManager transactionManager(DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
+    }
+}
+```
+
+- 적용(Service layer)
+
+```java
+    @Override
+    @Transactional(rollbackFor = IllegalArgumentException.class)
+    public void modify(Board b) {
+        SqlSession session = sessionFactory.openSession();
+        BoardMapper mapper = session.getMapper(BoardMapper.class);
+        int rowCnt = mapper.update(b);
+        if(rowCnt == 0){
+            throw new IllegalArgumentException();
+        }
+        if(b.getBoardTitle() == null || b.getBoardTitle().equals("")){
+            throw new IllegalArgumentException();
+        }
+    }
+```
+
+service layer의 코드 부분에서 commit, rollback, try ~ catch를 직접 작성하지 않아도 적용됨
+
+- 테스트 결과
+
+![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/96d4f809-ca24-4c06-ac1e-c069edc40ebf/034dde39-14e8-4d47-9f75-aae8bd680f11/image.png)
+
+적용이 안된 것을 확인할 수 있음

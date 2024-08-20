@@ -52,8 +52,7 @@ AOP는 OOP의 프로그램 구조를 보완하는 개념
   3. 프록시 생성
   4. 원본대신 프록시를 스프링 빈으로 등록
 
-
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/96d4f809-ca24-4c06-ac1e-c069edc40ebf/634329f1-ef89-4071-adcc-81816da58fa5/image.png)
+![image](https://github.com/user-attachments/assets/c7a240a3-19c3-491e-a37a-addc99d2cc56)
 
 ### 글쓰기 기능
 
@@ -137,6 +136,6 @@ service layer의 코드 부분에서 commit, rollback, try ~ catch를 직접 작
 
 - 테스트 결과
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/96d4f809-ca24-4c06-ac1e-c069edc40ebf/034dde39-14e8-4d47-9f75-aae8bd680f11/image.png)
+![image (1)](https://github.com/user-attachments/assets/bfd5a43b-8f62-41e5-9005-36a5711a551b)
 
-적용이 안된 것을 확인할 수 있음
+boardTitle의 값을 빈 상태로 PUT 요청을 보내게 되면 400 ERROR를 내보내고, 트랜잭션은 던진 예외를 통해 롤백 것을 확인할 수 있음

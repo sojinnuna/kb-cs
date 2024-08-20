@@ -1,5 +1,6 @@
 # AOP에 대해 설명해 주세요.
 #### AOP란?
+![image](https://github.com/user-attachments/assets/c7a240a3-19c3-491e-a37a-addc99d2cc56)
 AOP는 OOP의 프로그램 구조를 보완하는 개념
 - OOP 모듈화의 핵심 단위는 클래스
 - AOP의 모듈화의 핵심 단위는 관점(aspect)
@@ -51,9 +52,7 @@ AOP는 OOP의 프로그램 구조를 보완하는 개념
   2. 빈 후처리기가 어드바이저 조회
   3. 프록시 생성
   4. 원본대신 프록시를 스프링 빈으로 등록
-
-![image](https://github.com/user-attachments/assets/c7a240a3-19c3-491e-a37a-addc99d2cc56)
-
+## 코드 예시
 ### 글쓰기 기능
 
 - Service
@@ -95,7 +94,7 @@ public class MyControllerAdvice {
 
 ```
 
-Controller 부분에서 정상적인 케이스에 대한 것만 구성을 하고 비정상은 Advice에서 처리 
+Controller 부분에서 정상적인 케이스에 대한 것만 구성을 하고 비정상적인 것은 Advice에서 처리 
 
 ### @Transactional
 

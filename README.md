@@ -15,6 +15,8 @@
 |김소진|[@sojinnuna](https://github.com/sojinnuna/kb-cs)|
 |박희범|[@heebp](https://github.com/heebp/kb-cs)|
 |장성훈|[@jsh9611](https://github.com/jsh9611/kb-cs)|
+|안젤라|[@wpfkf4644](https://github.com/wpfkf4644/kb-cs)|
+|이도윤|[@cheonghaa](https://github.com/cheonghaa/kb-cs)|
 
 ## 📚 스터디 진행
 

@@ -16,6 +16,7 @@
 |박희범|[@heebp](https://github.com/heebp/kb-cs)|
 |장성훈|[@jsh9611](https://github.com/jsh9611/kb-cs)|
 |안젤라|[@wpfkf4644](https://github.com/wpfkf4644/kb-cs)|
+|이도윤|[@cheonghaa](https://github.com/cheonghaa/kb-cs)|
 
 ## 📚 스터디 진행
 
@@ -40,19 +41,19 @@ ex) 홍길동/network/TCP,UDP
 ```
 - PR 코멘트로 스터디 준비하면서 이해가 안된 것 또는 이런 거 더 추가로 공부하고 싶다 같은 것들을 남겨주시는게 제일 좋고, 없으시면 느낀 점 남겨주세요.
 
-|No.|조우형|박희범|김소진|김민지|장성훈|안젤라|
-|---|---|---|---|---|---|---|
-|1|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%A1%B0%EC%9A%B0%ED%98%95/network/%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98.md)|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EB%B0%95%ED%9D%AC%EB%B2%94/network/%EC%BF%A0%ED%82%A4%EC%99%80%20%EC%84%B8%EC%85%98.md)||||
-| 2|[HTTP 응답코드]|[HTTP 응답코드]|||||
-| 3|[HTTP 메서드]|[HTTP 메서드]|||||
-| 4|[HTTP]|[HTTP]|||||
-| 5|[웹소켓과 소켓통신]|[웹소켓과 소켓통신]|||||
-| 6|[HTTP 버전]|[HTTP 버전]|||||
-| 7|[TCP와 UDP]|[TCP와 UDP]|||||
-| 8|[DHCP]|[DHCP]|||||
-| 9|[IP 주소]|[IP 주소]|||||
-| 10|[OSI 7계층]|[OSI 7계층]|||||
-| 11|[3way HandShake]|[3way HandShake]|||||
-| 12|[4way HandShake]|[4way HandShake]|||||
-| 13|[로드밸런서]|[로드밸런서]|||||
-| 14||[DNS]|||||
+|No.|조우형|박희범|김소진|김민지|장성훈|안젤라|이도윤|
+|---|---|---|---|---|---|---|---|
+|1|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%A1%B0%EC%9A%B0%ED%98%95/network/%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98.md)|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EB%B0%95%ED%9D%AC%EB%B2%94/network/%EC%BF%A0%ED%82%A4%EC%99%80%20%EC%84%B8%EC%85%98.md)|||||
+| 2|[HTTP 응답코드]|[HTTP 응답코드]||||||
+| 3|[HTTP 메서드]|[HTTP 메서드]||||||
+| 4|[HTTP]|[HTTP]||||||
+| 5|[웹소켓과 소켓통신]|[웹소켓과 소켓통신]||||||
+| 6|[HTTP 버전]|[HTTP 버전]||||||
+| 7|[TCP와 UDP]|[TCP와 UDP]||||||
+| 8|[DHCP]|[DHCP]||||||
+| 9|[IP 주소]|[IP 주소]||||||
+| 10|[OSI 7계층]|[OSI 7계층]||||||
+| 11|[3way HandShake]|[3way HandShake]||||||
+| 12|[4way HandShake]|[4way HandShake]||||||
+| 13|[로드밸런서]|[로드밸런서]||||||
+| 14||[DNS]||||||

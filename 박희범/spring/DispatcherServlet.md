@@ -46,8 +46,12 @@ public class MyWebAppInitializer extends AbstractAnnotationConfigDispatcherServl
 - 용도: 여러 DispatcherServlet 인스턴스가 공통적으로 사용하는 빈을 정의하여, 중복 정의를 피하고 애플리케이션의 유지보수성을 높일 수 있음
 ### 여러 요청이 들어온다고 가정할 때, DispatcherServlet은 한번에 여러 요청을 모두 받을 수 있나요?
 네 받을 수 있습니다.
-Dispatcher servlet은 Thread Safety 하게 설계되어 있음
-WAS에서 요청이 들어올 때마다 Thread pool에서 할당하거나 새로운 스레드를 생성하여 요청을 처리
+Dispatcher servlet은 각 요청마다 서로 다른 thread가 할당되게끔 설계되어있습니다
+정확히는 WAS로 요청이 들어올 때마다 Thread pool에서 thread를 할당하거나 새로운 thread를 생성하여 요청을 처리합니다
 
 ### 수많은 @Controller 를 DispatcherServlet은 어떻게 구분 할까요?
-Handler Mapping을 사용하여 적절한 컨트롤러로 요청을 보냄 
+HandlerMapping : 요청을 처리할 수 있는 handler를 찾는 작업 수행
+RequestMappingHandlerMapping : @Controller가 붙은 클래스의 메서드를 조회하여 Mapping될 메서드를 찾아 handler로 등록
+dispatcher servlet은 요청이 들어오면 Handler Mapping에게 작업을 위임 handler Mapping은 작업을 수행하고 handler의 정보를 dipatcher servlet에게 반환
+dispatcher servlet은 handler에게 작업을 위임
+

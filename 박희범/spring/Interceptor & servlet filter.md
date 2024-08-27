@@ -2,7 +2,7 @@
 ![Spring MVC Request Lifecycle](https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F992590395ABF406F18)
 ### Interceptor
 
-- HTTP 요청과 응답을 가로채어 특정 로직을 처리할 수 있는 매커니즘
+- HTTP 요청과 응답을 가로채어 특정 로직을 처리할 수 있는 매커니즘    
   요청이 Controller에 전달되기 전, 응답이 클라이언트에게 전송되기 전에 어떤 공통적인 작업을 처리하기 위해 사용
 - Interceptor 설정 및 등록
     - 자바 설정
@@ -29,15 +29,15 @@
 	</mvc:interceptor>
     </mvc:interceptors>
     ```
-    WebConfig.class 파일에서 인터셉터를 빈으로 등록
+    WebConfig.class 파일에서 인터셉터를 빈으로 등록   
     > WebConfig.class : Servlet WebApplicationContext 설정 클래스, 웹 관련 bean들이 등록됨
     #### 자바 설정, XML 설정 차이   
-    - XML 설정 Interceptor
+    - XML 설정 Interceptor    
     Interceptor를 `MappedInterceptor bean`으로 등록, 이 빈을 HandlerMapping bean이 자동으로 감지하여 처리
-    - Java 설정 Intercpetor
+    - Java 설정 Intercpetor   
     Interceptor를 Spring MVC가 관리하는 HandlerMapping Bean에만 전달   
-    다른 프레임워크의 HandlerMapping Bean은 자동 인식 못함(ex : Spring Webflux framework)
-      - 해결 방법 : 
+    다른 프레임워크의 HandlerMapping Bean은 자동 인식 못함(ex : Spring Webflux framework)    
+      - 해결 방법 :    
       1. Java 설정에서 Interceptor를 MappedInterface bean으로 설정
       2. Interceptor를 다른 프레임워크의 HandlerMapping에 중복 설정 
     ### 인터셉터 로직(Interception)
@@ -70,7 +70,7 @@
     ### 주의 :  @ResponseBody, ResponseEntity 사용하는 경우
     @ResponseBody 또는 ResponseEntity를 사용한 컨트롤러 메서드는 응답이 HandlerAdapter 내에서 처리되며, 이 시점에서 응답이 이미 작성되고 커밋되기 때문에 postHandle 단계에서 응답을 수정할 수 없음
     ### 해결 방법 : ResponseBodyAdvice 사용
-    응답이 HandlerAdapter에서 처리되기 전에 호출됨. 여기서 추가적인 작업 수행 가능
+    응답이 HandlerAdapter에서 처리되기 전에 호출됨. 여기서 추가적인 작업 수행 가능    
     > ResponseBodyAdvice 설정 방법 : @ControllerAdvice와 함께 빈으로 선언하거나, 특정 RequestMappingHandlerAdapter에 직접 설정
 
 ### Filter

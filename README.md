@@ -63,5 +63,7 @@ ex) 홍길동/network/TCP,UDP
 | 11|[3way HandShake]|[3way HandShake]|[Wrapper Class](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Wrapper%20Class.md)|||||
 | 12|[4way HandShake]|[4way HandShake]|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/network/%EC%BF%A0%ED%82%A4%EC%99%80%20%EC%84%B8%EC%85%98.md)|||||
 | 13|[로드밸런서]|[로드밸런서]|[HTTP 상태코드](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/network/HTTP%20%EC%83%81%ED%83%9C%EC%BD%94%EB%93%9C.md)|||||
-| 14||[DNS]||||||
+| 14||[DNS]|[HTTP](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/network/HTTP.md)|||||
+| 15|||[HTTP Method](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/network/HTTP%20Method.md)|||||
+| 16|||[웹소켓과 소켓통신](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/network/%EC%9B%B9%EC%86%8C%EC%BC%93%2C%20%EC%86%8C%EC%BC%93%ED%86%B5%EC%8B%A0.md)|||||
 

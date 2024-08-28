@@ -48,20 +48,20 @@ ex) 홍길동/network/TCP,UDP
 - PR 코멘트로 스터디 준비하면서 이해가 안된 것 또는 이런 거 더 추가로 공부하고 싶다 같은 것들을 남겨주시는게 제일 좋고, 없으시면 느낀 점 남겨주세요.
 
 ## 스터디 저장소
-|No.|조우형|박희범|김소진|김민지|장성훈|안젤라|이도윤|
+|No.|조우형|박희범|김민지|장성훈|김소진|안젤라|이도윤|
 |---|---|---|---|---|---|---|---|
-|1|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%A1%B0%EC%9A%B0%ED%98%95/network/%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98.md)|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EB%B0%95%ED%9D%AC%EB%B2%94/network/%EC%BF%A0%ED%82%A4%EC%99%80%20%EC%84%B8%EC%85%98.md)|||||
-| 2|[HTTP 응답코드]|[HTTP 응답코드]||||||
-| 3|[HTTP 메서드]|[HTTP 메서드]|||[프로세스](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/process.md)|||
-| 4|[HTTP]|[HTTP]|||[프로세스 주소공간](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/process_address_space.md)|||
-| 5|[웹소켓과 소켓통신]|[웹소켓과 소켓통신]|||[Scheduler](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/scheduler.md)|||
-| 6|[HTTP 버전]|[HTTP 버전]|||[Context Switching](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/context_switching.md)|||
-| 7|[TCP와 UDP]|[TCP와 UDP]|||[Deadlock](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/deadlock.md)|||
-| 8|[DHCP]|[DHCP]|||[Thread Safe](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/thread_safety.md)|||
-| 9|[IP 주소]|[IP 주소]||||||
-| 10|[OSI 7계층]|[OSI 7계층]||||||
-| 11|[3way HandShake]|[3way HandShake]||||||
-| 12|[4way HandShake]|[4way HandShake]||||||
-| 13|[로드밸런서]|[로드밸런서]||||||
+|1|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%A1%B0%EC%9A%B0%ED%98%95/network/%EC%BF%A0%ED%82%A4%EC%99%80%EC%84%B8%EC%85%98.md)|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EB%B0%95%ED%9D%AC%EB%B2%94/network/%EC%BF%A0%ED%82%A4%EC%99%80%20%EC%84%B8%EC%85%98.md)|[Class 클래스](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Class%20%ED%81%B4%EB%9E%98%EC%8A%A4.md)||||
+| 2|[HTTP 응답코드]|[HTTP 응답코드]|[static class와 static method](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/static%20class%EC%99%80%20static%20method.md)|||||
+| 3|[HTTP 메서드]|[HTTP 메서드]|[Exception](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Exception.md)|[프로세스](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/process.md)|||
+| 4|[HTTP]|[HTTP]|[Synchronized](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Synchronized.md)|[프로세스 주소공간](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/process_address_space.md)||||
+| 5|[웹소켓과 소켓통신]|[웹소켓과 소켓통신]|[Stream](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Stream.md)|[Scheduler](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/scheduler.md)||||
+| 6|[HTTP 버전]|[HTTP 버전]|[가비지 컬렉션](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Garbage%20Collection.md)|[Context Switching](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/context_switching.md)||||
+| 7|[TCP와 UDP]|[TCP와 UDP]|[Equals()와 Hashcode()](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/equals%EC%99%80%20hashCode.md)|[Deadlock](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/deadlock.md)||||
+| 8|[DHCP]|[DHCP]|[Servlet](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Servlet.md)|[Thread Safe](https://github.com/wxxhyeong/kb-cs/blob/main/%EC%9E%A5%EC%84%B1%ED%9B%88/operating-system/thread_safety.md)||||
+| 9|[IP 주소]|[IP 주소]|[DispatcherServlet](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/DispatcherServlet.md)|||||
+| 10|[OSI 7계층]|[OSI 7계층]|[Generic](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Generic.md)|||||
+| 11|[3way HandShake]|[3way HandShake]|[Wrapper Class](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/java/Wrapper%20Class.md)|||||
+| 12|[4way HandShake]|[4way HandShake]|[쿠키와 세션](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/network/%EC%BF%A0%ED%82%A4%EC%99%80%20%EC%84%B8%EC%85%98.md)|||||
+| 13|[로드밸런서]|[로드밸런서]|[HTTP 상태코드](https://github.com/wxxhyeong/kb-cs/blob/main/%EA%B9%80%EB%AF%BC%EC%A7%80/network/HTTP%20%EC%83%81%ED%83%9C%EC%BD%94%EB%93%9C.md)|||||
 | 14||[DNS]||||||
 
